@@ -10,6 +10,8 @@ namespace Demo
             // Concaténation : +
             // Saut de ligne : \n
 
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             const int multiple = 8;
             const int valMax = 10;
 
@@ -17,8 +19,13 @@ namespace Demo
 
             for (int i=0; i <= valMax; i++)
             {
-                affichage = affichage + i + " x " + multiple + " = ";
-                affichage += i * multiple;
+                affichage +=
+                    string.Format("{0:00} x {1,-4} = {2:C}",
+                    i,               // Element 0
+                    multiple,        // Element 1
+                    i*multiple       // Element 2
+                    );
+
                 affichage += "\n";
             }
             
