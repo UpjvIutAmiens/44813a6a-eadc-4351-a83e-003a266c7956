@@ -1,6 +1,8 @@
-﻿namespace Demo
+﻿using System;
+
+namespace Demo
 {
-    class Program
+    class Program // Demo.Program
     {
         static void Main(string[] args)
         {
@@ -8,7 +10,19 @@
             // Concaténation : +
             // Saut de ligne : \n
 
+            const int multiple = 8;
+            const int valMax = 10;
 
+            string affichage = "";
+
+            for (int i=0; i <= valMax; i++)
+            {
+                affichage = affichage + i + " x " + multiple + " = ";
+                affichage += i * multiple;
+                affichage += "\n";
+            }
+            
+            Console.WriteLine(affichage);
         }
     }
 }
